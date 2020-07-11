@@ -1,0 +1,28 @@
+<p [ngStyle]="{
+  color: paraColor,
+  fontSize: paraSize + 'px',
+  fontFamily: paraFont
+}">
+  This paragraph is going to be modified depending on user's choice.
+  He will choose in the next form inputs the color, the size and the font
+  of the paragraph.
+</p>
+
+<div class="form-group">
+  Choose a color for your paragraph :
+  <input type="text" placeholder="Enter Color" [(ngModel)]="paraColor">
+</div>
+<div class="form-group">
+  Choose a size for your paragraph :
+  <input type="number" [(ngModel)]="paraSize">
+</div>
+<div class="form-group">
+  <label for="paraFont">Choose a font for your paragraph</label>
+  <select class="form-control" id="paraFont" [(ngModel)]="paraFont">
+    <option>Georgia</option>
+    <option>serif</option>
+    <option>cursive</option>
+    <option>system-ui</option>
+    <option>fantasy</option>
+  </select>
+</div>
